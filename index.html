@@ -283,7 +283,7 @@
                     </button>
                     <button id="btn-back" onclick="handleSaveAndClose()" class="ripple-target container-convex flex-1 h-[56px] rounded-2xl font-bold uppercase tracking-widest text-emerald-400">Save & Close</button>
                 </div>
-                <div class="absolute bottom-2 left-0 w-full flex items-center justify-center text-zinc-500 font-medium tracking-[0.1em] text-[11px] pointer-events-none">DiluteCalc V26.3</div>
+                <div class="absolute bottom-2 left-0 w-full flex items-center justify-center text-zinc-500 font-medium tracking-[0.1em] text-[11px] pointer-events-none">DiluteCalc V26.3.6</div>
             </div>
         </div>
 
@@ -401,7 +401,7 @@
                             </div>
                         </div>
                         
-                        <div class="text-2xl font-bold text-zinc-500 flex items-center justify-center pb-1">:</div>
+                        <div class="text-2xl font-bold text-zinc-500 flex items-center pb-1">:</div>
                         
                         <div class="input-box relative flex items-center bg-zinc-800 border border-zinc-700 focus-within:shadow-[0_0_0_3px_#06b6d4] rounded-2xl h-[56px] pl-5 pr-2 w-1/2" onclick="document.getElementById('ratio').focus()">
                             <input type="number" id="ratio" value="15" min="0.1" step="1" class="flex-1 bg-transparent text-cyan-400 text-2xl font-bold outline-none w-full text-left" onfocus="moveCursorToEnd(this)" oninput="handleManualInput('ratio')">
@@ -458,7 +458,7 @@
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                                     </div>
                                 </div>
-                                <span id="unit-btl" class="text-zinc-500 font-bold text-sm w-[36px] text-center uppercase">L</span>
+                                <span id="unit-btl" class="text-zinc-500 font-bold text-lg w-[36px] text-center uppercase">L</span>
                             </div>
                         </div>
                         
@@ -592,16 +592,16 @@
                         <span class="text-cyan-400 text-xl">🧪</span> Dilution ratio
                     </label>
                     
-                    <div class="flex gap-3 w-full">
-                        <div class="input-box relative flex items-center bg-zinc-800 border border-zinc-700 focus-within:shadow-[0_0_0_3px_#10b981] rounded-3xl h-[84px] pl-2 pr-2 w-1/2" onclick="document.getElementById('ratio-product-simple').focus()">
+                    <div class="flex gap-1.5 w-full">
+                        <div class="input-box relative flex items-center bg-zinc-800 border border-zinc-700 focus-within:shadow-[0_0_0_3px_#10b981] rounded-3xl h-[84px] pl-3 pr-3 flex-1" onclick="document.getElementById('ratio-product-simple').focus()">
                             <input type="number" id="ratio-product-simple" value="1" min="0.1" step="1" class="flex-1 bg-transparent text-emerald-400 text-4xl font-bold outline-none w-full text-left" onfocus="moveCursorToEnd(this)" oninput="handleManualInput('ratio-product-simple')">
                             
                             <div class="flex items-center gap-3 shrink-0 ml-1">
                                 <div class="flex flex-col container-convex rounded-lg w-[32px] h-[52px] overflow-hidden shrink-0">
-                                    <div class="custom-arrow-btn text-cyan-400 ripple-target active:scale-95" onclick="event.stopPropagation(); zmien('ratio-product-simple', 1, 0.1, event)">
+                                    <div class="custom-arrow-btn text-cyan-400 ripple-target active:scale-95" onclick="event.stopPropagation(); zmien('ratio-product-simple', 1, 1, event)">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"></path></svg>
                                     </div>
-                                    <div class="custom-arrow-btn border-t border-zinc-600 text-cyan-400 ripple-target active:scale-95" onclick="event.stopPropagation(); zmien('ratio-product-simple', -1, 0.1, event)">
+                                    <div class="custom-arrow-btn border-t border-zinc-600 text-cyan-400 ripple-target active:scale-95" onclick="event.stopPropagation(); zmien('ratio-product-simple', -1, 1, event)">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                                     </div>
                                 </div>
@@ -611,16 +611,16 @@
                             </div>
                         </div>
                         
-                        <div class="text-3xl font-bold text-zinc-500 flex items-center justify-center pb-1 w-[20px] shrink-0">:</div>
+                        <div class="text-3xl font-bold text-zinc-500 flex items-center pb-1">:</div>
                         
-                        <div class="input-box relative flex items-center bg-zinc-800 border border-zinc-700 focus-within:shadow-[0_0_0_3px_#06b6d4] rounded-3xl h-[84px] pl-2 pr-2 w-1/2" onclick="document.getElementById('ratio-simple').focus()">
+                        <div class="input-box relative flex items-center bg-zinc-800 border border-zinc-700 focus-within:shadow-[0_0_0_3px_#06b6d4] rounded-3xl h-[84px] pl-3 pr-3 flex-1" onclick="document.getElementById('ratio-simple').focus()">
                             <input type="number" id="ratio-simple" value="15" min="0.1" step="1" class="flex-1 bg-transparent text-cyan-400 text-4xl font-bold outline-none w-full text-left" onfocus="moveCursorToEnd(this)" oninput="handleManualInput('ratio-simple')">
                             <div class="flex items-center gap-3 shrink-0 ml-1">
                                 <div class="flex flex-col container-convex rounded-lg w-[32px] h-[52px] overflow-hidden shrink-0">
-                                    <div class="custom-arrow-btn text-cyan-400 ripple-target active:scale-95" onclick="event.stopPropagation(); zmien('ratio-simple', 1, 0.1, event)">
+                                    <div class="custom-arrow-btn text-cyan-400 ripple-target active:scale-95" onclick="event.stopPropagation(); zmien('ratio-simple', 1, 1, event)">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"></path></svg>
                                     </div>
-                                    <div class="custom-arrow-btn border-t border-zinc-600 text-cyan-400 ripple-target active:scale-95" onclick="event.stopPropagation(); zmien('ratio-simple', -1, 0.1, event)">
+                                    <div class="custom-arrow-btn border-t border-zinc-600 text-cyan-400 ripple-target active:scale-95" onclick="event.stopPropagation(); zmien('ratio-simple', -1, 1, event)">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                                     </div>
                                 </div>
@@ -760,9 +760,9 @@
     </div>
 
     <script>
-        const notebookSvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />`;
-        const copySvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />`;
-        const shareSvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />`;
+        const notebookSvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>`;
+        const copySvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" /></svg>`;
+        const shareSvg = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 inline-block mr-1 -mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" /></svg>`;
 
         const translations = {
             en: { subHeader: "Chemical Dilution Calculator", labelVolume: "Solution volume", labelProduct: "Product amount", unitLiters: "L", unitMl: "ml", unitOz: "oz", unitGal: "gal", descVolume: "How many liters of ready solution do you want to make?", descProduct: "How many ml of concentrate do you have?", descRatio: "Example: 1:15 = 1 part product + 15 parts water", labelRatio: "Dilution ratio", unitParts: "parts<br>water", labelPrice: "Cost Analysis", labelReady: "Mix & Cost", labelTimer: "Timer", resProduct: "Product", resWater: "Water", resTotalLabel: "Total:", btnCopy: `${copySvg} Copy`, btnShare: `${shareSvg} Share`, btnSave: `${notebookSvg} Save`, visualLabel: "Visual Proportion", copied: "✓ Copied", shared: "✓ Shared", saved: "✓ Saved", labelCost: "Cost", menuTitle: "Settings", menuOpMode: "Operation Mode", menuCalcMode: "Calculator Mode", optAdvanced: "Advanced", optSimple: "Simple", menuUnits: "Units", menuLang: "Language", menuCurrency: "Currency", optSolution: "Solution", optProduct: "Product", optMetric: "Metric", optImperial: "Imperial", btnBack: "Save & Close", optEng: "EN", optEsp: "ES", optPol: "PL", optFra: "FR", optGer: "DE", optIta: "IT", resCost: "Cost", menuRounding: "Rounding results", optRoundOff: "Off", optRoundOn: "On", favTitle: "Saved Mixtures", favClose: "Close", favEmpty: "No saved mixtures yet.", pwaTitle: "Install DiluteCalc App", pwaDesc: 'Tap "Share" and then "Add to Home Screen" to install the app.', editPrompt: "Enter new mixture name:", savePromptTitle: "Mixture Name:", btnCancel: "Cancel", btnSaveModal: "Save", backupRestore: "Backup & Restore", exportBtn: "Export", importBtn: "Import", backupExported: "Backup exported successfully!", backupImported: "Backup imported successfully!", backupError: "Invalid backup file!", noteTitle: "Note", notePlaceholder: "Add a note...", qrTitle: "Scan QR", qrShare: "Share" },
